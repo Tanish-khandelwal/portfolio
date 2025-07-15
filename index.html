@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+</head>
+<body>
+    <header>
+    <h1>Welcome to My Portfolio - Tanish Khandelwal</h1>
+    </header>
+    <main>
+    <p><b>Here is my education details :-</b></p>
+    <a href="education.html" target="_main">Go to my education details</a>
+    <hr />
+    <p><b>Here is my experience details :-</b></p>
+    <a href="Experience.html" target="_main">Go to my experience details</a>
+    <hr />
+    <p><b>Here is my project details :-</b></p>
+    <a href="project.html" target="_main">Go to my project details</a>
+    <hr />
+    <p><b>Here is my useful profiles :-</b></p>
+    <a href="https://www.linkedin.com/in/tanish-khandelwal-654108315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_main"><img src="https://cdn.uconnectlabs.com/wp-content/uploads/sites/46/2022/08/Linkedin-Logo-e1660320077673.png" alt="Linkedin" height="50" ></a>
+    <br />
+    <a href="https://github.com/Tanish-khandelwal/CODSOFT" target="_main"><img src="https://miro.medium.com/v2/resize:fit:1400/1*JLYlSLSK8-AZo8gt9UdYqA.jpeg" alt="Github" height="100"></a>
+    <hr>
+    <p>Please feel free to explore my portfolio and reach out if you have any questions or would like to connect!</p>
+    <p>Here is a small form for you to fill out:</p>
+
+    <script>
+        function data(){
+            var a=document.getElementById("n1").value;
+            var b=document.getElementById("n2").value;
+            var c=document.getElementById("n3").value;
+            var d=document.getElementById("n4").value;
+            var g=document.getElementById("n5").value;
+            var e=document.getElementsByName("university");
+            let universitySelected = false;
+            for (let radio of e) {
+                if(radio.checked) {
+                    universitySelected = true;
+                    break;
+                }
+            }
+            var f=document.getElementsByName("language");
+            let languageSelected = false;
+            for (let checkbox of f) {
+                if(checkbox.checked) {
+                    languageSelected = true;
+                    break;
+                }
+            }
+            if(a=="" || b=="" || c=="" || d==""  || g=="") 
+            {
+                alert("All the fields are mandatory!");
+                return false;
+            }
+            else if(c.length <10 || c.length >10)
+            {
+                alert("Please enter a valid phone number!");
+                return false;
+            }
+            else if(isNaN(c)) {
+                alert("please enter a number in phone number!");
+                return false;
+            }
+            else if(!universitySelected) 
+            {
+                alert("please select your university name!");
+                return false;
+            }
+             else if(!languageSelected) 
+            {
+                alert("please select your fav language!");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
+        }
+    </script>
+    <form action="hello.html" onsubmit="return data()">
+        <p>I would like to know your Name :</p>
+        <input type="text" placeholder="Your name" id="n1">
+        <br />
+        <p>Enter your E-mail ID</p>
+        <input type="text" placeholder="Your Email" id="n2">
+        <br />
+        <p>Enter your Phone Number</p>
+        <input type="text" placeholder="Your Phone Number" id="n3">
+        <br />
+        <p>In which university are you studying?</p>
+        <input type="radio" value="JECRC University" name="university" id="JECRC University">JECRC University
+        <br />
+            <input type="radio" value="Biyani Group of Colleges" name="university" id="Biyani Group of Colleges">Biyani Group of Colleges
+        <br />
+            <input type="radio" value="SKIT" name="university" id="SKIT">SKIT
+        <br />
+            <input type="radio" value="JNU" name="university" id="JNU">JNU
+        <br />
+            <input type="radio" value="JKLU" name="university" id="JKLU">JKLU
+        <br />
+            <input type="radio" value="BIT mesra" name="university" id="BIT mesra">BIT mesra
+        <br />
+        <p>Course enrolled In?</p>
+        <select name="Course" id="n5">
+            <option value=""></option>
+            <option value="BCA">BCA</option>
+            <option value="BBA">BBA</option>
+            <option value="BTECH">BTECH</option>
+            <option value="MCA">MCA</option>
+            <option value="MBA">MBA</option>
+            <option value="MTECH">MTECH</option>
+            <option value="BSC">BSC</option>
+            <option value="MASS COMM.">MASS COMM.</option>
+            <option value="B.COM">B.COM</option>
+            <option value="M.COM">M.COM</option>
+            <option value="Others">Others</option>
+        </select>
+        <br />
+        <p>Your favourite programming languages:</p>
+            <input type="checkbox" value="Python" name="language" id="Python">Python
+        <br />
+            <input type="checkbox" value="C programming" name="language" id="C programming">C programming
+        <br />
+            <input type="checkbox" value="C++" name="language" id="C++">C++
+        <br />
+            <input type="checkbox" value="Java" name="language" id="Java">Java
+        <br />
+            <input type="checkbox" value="Mysql" name="language" id="Mysql">Mysql
+        <br />
+        <p>Please share your feedback or queries:</p>
+        <textarea name="Feedback" id="n4" placeholder="Give your feedback or as a query if you have any" rows="8" cols="20"></textarea>
+        <br /><br />
+        <input type="submit" value="submit">
+    </form>
+    </main>
+    <footer>
+        <p><b>Thank you for visiting my portfolio!</b></p>
+        <p><b>Feel free to contact me at tanish26112005@gmail.com</b></p>
+        </footer>
+</body>
+</html>
+
+
